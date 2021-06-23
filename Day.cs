@@ -78,7 +78,7 @@ namespace asp_scheduler
             string dd = day.Substring(0, 2);
             string mm = day.Substring(3, 2);
             string yyyy = day.Substring(6, 4);
-            return yyyy + mm + dd + ".txt";
+            return yyyy + mm + dd + ".xml";
         }
     }
 }
