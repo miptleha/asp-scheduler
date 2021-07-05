@@ -33,17 +33,23 @@ namespace asp_scheduler.Pages
             string now = DateTime.Now.ToString(FORMAT);
             if (string.IsNullOrEmpty(day))
                 day = now;
+            var w1 = new Week(now, FORMAT);
+            now = w1.GetCurWeek();
 
+            //get Monday (week schedule)
+            var w = new Week(day, FORMAT);
+            day = w.GetCurWeek();
+            
             var d = new Day(day, FORMAT);
             d.Load();
             Day = day;
             Want = d.Want;
             Done = d.Done;
 
-            ViewData["CurDay"] = day;
+            ViewData["CurDay"] = w.GetFullWeek();
             DateTime dt = DateTime.ParseExact(day, FORMAT, null);
-            ViewData["NextDay"] = dt.AddDays(1).ToString(FORMAT);
-            ViewData["PrevDay"] = dt.AddDays(-1).ToString(FORMAT);
+            ViewData["NextDay"] = dt.AddDays(7).ToString(FORMAT);
+            ViewData["PrevDay"] = dt.AddDays(-7).ToString(FORMAT);
             ViewData["IsToday"] = day == now ? "1" : "0";
         }
 

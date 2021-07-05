@@ -17,9 +17,9 @@
                 </div>
                 <nav class="mt-2">
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" asp-page="/Index" asp-route-day="@ViewData["PrevDay"]">Previous</a></li>
-                        <li class="page-item @((string)ViewData["IsToday"] == "1" ? "active" : "")"><a class="page-link" asp-page="/Index">Today</a></li>
-                        <li class="page-item"><a class="page-link" asp-page="/Index" asp-route-day="@ViewData["NextDay"]">Next</a></li>
+                        <li class="page-item"><a class="page-link" asp-page="/Index" asp-route-day="@ViewData["PrevDay"]"><<</a></li>
+                        <li class="page-item @((string)ViewData["IsToday"] == "1" ? "active" : "")"><a class="page-link" asp-page="/Index">This week</a></li>
+                        <li class="page-item"><a class="page-link" asp-page="/Index" asp-route-day="@ViewData["NextDay"]">>></a></li>
                     </ul>
                 </nav>
             </div>
