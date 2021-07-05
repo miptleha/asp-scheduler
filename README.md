@@ -6,5 +6,5 @@ Designed to create a weekly plan and report. The navigation buttons can be used 
 
 Has simple architecture: one get handler (get week info) and one post handler (save week info).
 
-Data are stored in xml format in application subfolder (one file for each week).
+Data is stored in xml format in application subfolder (one file for each week).
 Require write permissions after publishing the application to IIS. 
