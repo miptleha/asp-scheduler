@@ -1,6 +1,6 @@
 ![scheduler](scheduler.png)
 
-Simple day scheduler on ASP.NET Core.
+Simple week scheduler on ASP.NET Core.
 
 Designed to create a weekly plan and report. The navigation buttons can be used to change a week.
 
