@@ -46,7 +46,8 @@ namespace asp_scheduler.Pages
             Want = d.Want;
             Done = d.Done;
 
-            ViewData["CurDay"] = w.GetFullWeek();
+            ViewData["CurDay"] = day;
+            ViewData["CurWeek"] = w.GetFullWeek();
             DateTime dt = DateTime.ParseExact(day, FORMAT, null);
             ViewData["NextDay"] = dt.AddDays(7).ToString(FORMAT);
             ViewData["PrevDay"] = dt.AddDays(-7).ToString(FORMAT);
